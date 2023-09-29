@@ -7,11 +7,14 @@ from models.Conta import Conta
 session = Session_sql()
 
 MENU = """
+Sistema Bancário Tabajara
+----------------------------
 1 - MOSTRAR TODAS AS CONTAS
 2 - NOVA CONTA
 3 - REMOVER CONTA
 4 - PESQUISAR CONTA
 5 - SAIR
+----------------------------
 """
 
 loop = True
