@@ -31,7 +31,7 @@ while loop:
             nome = input("Digite o nome: ")
             saldo = float(input("Digite o saldo: "))
             conta = Conta(nome=nome, saldo=saldo)
-            session.nova_conta(conta)
+            print(session.nova_conta(conta))
         case 3:
             id = input("Qual conta deseja deletar?")
             print(session.remover_conta(id))
@@ -42,7 +42,7 @@ while loop:
             id = input("Qual conta deseja atualizar?")
             nome = input("Digite o novo nome: ")
             saldo = float(input("Digite o novo saldo: "))
-            session.atualizar_conta(id, nome, saldo)
+            print(session.atualizar_conta(id, nome, saldo))
         case 6:
             break
         case _:
