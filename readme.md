@@ -18,7 +18,8 @@ Clone este repositório: git clone https://github.com/Flipedds/tabajara
 
 Navegue até o diretório do projeto: cd tabajara
 
-Crie um arquivo .env na raiz do projeto com o nome CONECTION_STRING e atribua a sua string de conexão ao banco de dados
+Crie um arquivo .env na raiz do projeto com o nome CONECTION_STRING e atribua a sua string de conexão ao banco de dados,
+seguindo o modelo mysql+mysqlconnector://user:senha@host/banco
 
 Execute o programa principal: python main.py
 
