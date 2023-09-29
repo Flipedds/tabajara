@@ -1,10 +1,14 @@
 from sqlalchemy import create_engine, select, delete
 from sqlalchemy.orm import Session
 from models.Conta import Conta
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class Session_sql:
     def __init__(self):
-        self.engine = create_engine("mysql+mysqlconnector://root:root@127.0.0.1:3306/dbtabajara", echo=False)
+        self.engine = create_engine(os.getenv("CONECTION_STRING"), echo=False)
         self.session = Session(self.engine)
 
     def nova_conta(self, conta: Conta):

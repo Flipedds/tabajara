@@ -1,9 +1,6 @@
 from models.Session import Session_sql
 from models.Conta import Conta
 
-# engine = create_engine("mysql+mysqlconnector://root:root@127.0.0.1:3306/dbtabajara", echo=True)
-# Base.metadata.create_all(engine)
-
 session = Session_sql()
 
 MENU = """
