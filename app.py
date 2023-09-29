@@ -13,7 +13,8 @@ Sistema Bancário Tabajara
 2 - NOVA CONTA
 3 - REMOVER CONTA
 4 - PESQUISAR CONTA
-5 - SAIR
+5 - ALTERAR CONTA
+6 - SAIR
 ----------------------------
 """
 
@@ -38,6 +39,11 @@ while loop:
             id = input("Qual conta deseja pesquisar?")
             print(session.selecionar_conta(id))
         case 5:
+            id = input("Qual conta deseja atualizar?")
+            nome = input("Digite o novo nome: ")
+            saldo = float(input("Digite o novo saldo: "))
+            session.atualizar_conta(id, nome, saldo)
+        case 6:
             break
         case _:
             pass

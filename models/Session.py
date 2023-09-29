@@ -43,3 +43,13 @@ class Session_sql:
 
         except Exception as err:
             return err
+
+    def atualizar_conta(self, id, nome, saldo):
+        try:
+            conta_para_atualizar = self.session.query(Conta).filter_by(id=id).first()
+            conta_para_atualizar.nome = nome
+            conta_para_atualizar.saldo = saldo
+            self.session.commit()
+            self.session.close()
+        except Exception as err:
+            return err
